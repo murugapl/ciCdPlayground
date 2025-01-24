@@ -35,9 +35,3 @@ jobs:
     - name: Run E2E tests
       run: yarn test:e2e
 
-    - name: Archive test results
-      if: always()
-      uses: actions/upload-artifact@v3
-      with:
-        name: test-results
-        path: '**/reports/**/*.xml'
